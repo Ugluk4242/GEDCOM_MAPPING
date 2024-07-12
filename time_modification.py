@@ -45,6 +45,24 @@ def time_modification(time_str):
             mois = date_diff.month
             jour = date_diff.day
 
+    elif 'CAL' in time_str:
+        if len(time_str) == 8:
+            annee = int(time_str[4:])
+            mois = random.randint(1,12)
+            jour = random.randint(1,28)
+        
+        if len(time_str) == 12:
+            annee = int(time_str[8:])
+            datetime_object = datetime.strptime(time_str[4:7], "%b")
+            mois = datetime_object.month
+            jour = random.randint(1,28)
+        
+        if len(time_str) == 15:
+            annee = int(time_str[11:])
+            datetime_object = datetime.strptime(time_str[7:10], "%b")
+            mois = datetime_object.month
+            jour = int(time_str[4:6])
+            
     elif time_str == '31 NOV 1768':
         annee = 1768
         mois = 11
