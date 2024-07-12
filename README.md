@@ -1,7 +1,13 @@
 # GEDCOM_MAPPING
 Visualization tool to map and animate the displacements of ancestors.
 
-To use this and make the result interesting, you must have gathered some genealogical data in a gedcom file.
+Requirements:
+1. A gedcom files containing time and place of
+    - birth
+    - mariage
+    - death
+
+Gedcom files are a standard for genealogical data, most genealogy websites let you export your database in this format.
 
 Run the scripts in this order:
 
